@@ -36,16 +36,17 @@ ubuntu-xenial
 vagrant@ubuntu-xenial:~$
 ```
 
-If you want to connect to your Docker container and use Bash, you need to use docker exec -ti:
-
+If you want to connect to your Docker container and use Bash, you need to use `docker exec -ti`:
+```shell
 vagrant@ubuntu-xenial:~$ docker exec -ti e1fc0d4bbb5d /bin/bash
 root@e1fc0d4bbb5d:/# echo "I am in $(hostname) Docker container"
 I am in e1fc0d4bbb5d Docker container
 root@e1fc0d4bbb5d:/# exit
 exit
 vagrant@ubuntu-xenial:~$
-If you want to stop a container, use docker stop:
-
+```
+If you want to stop a container, use `docker stop`:
+```shell
 vagrant@ubuntu-xenial:~$ docker ps
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
 e1fc0d4bbb5d        ubuntu:16.04        "/bin/bash"         5 minutes ago       Up 5 minutes                            keen_blackwell
@@ -54,3 +55,4 @@ e1fc0d4bbb5d
 vagrant@ubuntu-xenial:~$ docker ps
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
 vagrant@ubuntu-xenial:~$
+```
